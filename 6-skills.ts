@@ -63,7 +63,7 @@ function loadSkills(): Skill[] {
     .map((location) => {
       try {
         const content = fs.readFileSync(location, "utf-8");
-        const frontmatter = yaml.parse(content.split(/^---/)[1]!);
+        const frontmatter = yaml.parse(content.split(/^---/m)[1]!);
         return {
           name: frontmatter.name,
           description: frontmatter.description,
