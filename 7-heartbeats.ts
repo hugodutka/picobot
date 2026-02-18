@@ -54,7 +54,7 @@ interface Skill {
 }
 
 function loadSkills(): Skill[] {
-  const skillsDirPath = path.resolve(workspaceDir, "skills");
+  const skillsDirPath = path.resolve(workspaceDir, ".agents", "skills");
   if (!fs.existsSync(skillsDirPath)) {
     return [];
   }
