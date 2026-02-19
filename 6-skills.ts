@@ -92,9 +92,9 @@ function systemPrompt(): string {
     : "Your AGENTS.md file is missing. Tell the user to create it.";
   systemPrompt += "\n\n";
 
-  const boostrapMdPath = path.resolve(workspaceDir, "BOOTSTRAP.md");
-  if (fs.existsSync(boostrapMdPath)) {
-    systemPrompt += fs.readFileSync(boostrapMdPath, "utf-8");
+  const bootstrapMdPath = path.resolve(workspaceDir, "BOOTSTRAP.md");
+  if (fs.existsSync(bootstrapMdPath)) {
+    systemPrompt += fs.readFileSync(bootstrapMdPath, "utf-8");
   }
 
   const skills = loadSkills();
